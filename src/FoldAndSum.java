@@ -17,11 +17,14 @@ public class FoldAndSum {
         int[] foldedArray = new int[inputNumbers.length / 2];
         for (int i = 0; i < k; i++) {
             foldedArray[i] = inputNumbers[k + i] + inputNumbers[k - 1 - i];
-            foldedArray[foldedArray.length - 1 - i] = inputNumbers[inputNumbers.length - 1 - k - i] + inputNumbers[inputNumbers.length - k + i];
+
+            foldedArray[foldedArray.length - 1 - i] =
+                    inputNumbers[inputNumbers.length - 1 - k - i]
+                    + inputNumbers[inputNumbers.length - k + i];
         }
 
         for (int num : foldedArray) {
-            System.out.print(num+" ");
+            System.out.print(num + " ");
         }
     }
 }
